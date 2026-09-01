@@ -5,7 +5,7 @@ import { Card, Icon, Section, SectionHead } from "@/components/ui";
 import { ClosingCta, HisaBanner, PageHero, spaces } from "@/components/blocks";
 
 export const metadata: Metadata = {
-  title: "Services — Wet Space, Dry Space, Whole Bath",
+  title: "Services: Wet Space, Dry Space, Whole Bath",
   description:
     "Walk-in showers, walk-in tubs, tub-to-shower conversions, barrier-free and roll-in bathing, and complete bathroom remodels across Michigan. Wet space, dry space, or the whole bath.",
   alternates: { canonical: "/services" },
@@ -109,7 +109,7 @@ export default function ServicesPage() {
             <SectionHead
               eyebrow="Aging in place"
               title="Accessible bathing, done so it doesn't look institutional."
-              intro="A safe bathroom shouldn't announce itself. Modern assist bars, low thresholds and seated-height fixtures can read as design choices — and still hold 250 pounds."
+              intro="A safe bathroom shouldn't announce itself. Modern assist bars, low thresholds and seated-height fixtures can read as design choices, and still hold 250 pounds."
             />
             <div className="mt-8 overflow-hidden rounded-2xl ring-1 ring-ink/8">
               <Image

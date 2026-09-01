@@ -13,7 +13,7 @@ const projectTypes = [
   "Whole bathroom remodel",
   "Accessibility upgrades (grab bars, seating, hand shower)",
   "VA HISA grant project",
-  "Not sure yet — I'd like advice",
+  "Not sure yet, I'd like advice",
 ];
 
 const field =
@@ -32,7 +32,7 @@ export default function ContactForm() {
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    // Honeypot — bots fill hidden fields, people don't.
+    // Honeypot: bots fill hidden fields, people don't.
     if ((data.get("botcheck") as string)?.length) return;
 
     if (!configured) {
@@ -48,7 +48,7 @@ export default function ContactForm() {
         `${data.get("message")}`,
       ].join("\n");
       window.location.href = `mailto:${site.email}?subject=${encodeURIComponent(
-        "Website enquiry — " + data.get("name"),
+        "Website enquiry from " + data.get("name"),
       )}&body=${encodeURIComponent(body)}`;
       return;
     }
@@ -56,7 +56,7 @@ export default function ContactForm() {
     setStatus("sending");
     setError("");
     data.append("access_key", site.web3formsKey);
-    data.append("subject", `New website enquiry — ${data.get("name")}`);
+    data.append("subject", `New website enquiry from ${data.get("name")}`);
     data.append("from_name", "michiganshower.com");
 
     try {
@@ -74,7 +74,7 @@ export default function ContactForm() {
       }
     } catch {
       setStatus("error");
-      setError("Network error — please email us directly.");
+      setError("Network error. Please email us directly.");
     }
   }
 

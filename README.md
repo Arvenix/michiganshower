@@ -52,10 +52,17 @@ git push -u origin main
 
 In the Vercel project → **Settings → Domains** → add `michiganshower.com` and `www.michiganshower.com`. Vercel shows you the exact DNS records. At your domain registrar:
 
-- `A` record for `@` → the IP Vercel gives you
-- `CNAME` record for `www` → `cname.vercel-dns.com`
+| Type | Name | Data |
+|---|---|---|
+| `A` | `@` | the IP Vercel shows you (currently `216.198.79.1`) |
+| `CNAME` | `www` | the **unique hostname** Vercel shows you, e.g. `d1d4fc829fe7bc7c.vercel-dns-017.com` |
 
-DNS usually propagates within an hour. HTTPS is issued automatically.
+Two things people get wrong here:
+
+- **The IP goes in the A record, never a CNAME.** A CNAME points at a hostname, not an address.
+- **Don't use the old generic `cname.vercel-dns.com`.** Vercel now issues a different CNAME target per project. Copy the exact one from Settings → Domains.
+
+Set TTL to 1 hour while you're configuring so mistakes are quick to undo. DNS usually propagates within the hour. HTTPS is issued automatically once Vercel sees the records.
 
 **After the domain is live**, confirm `site.url` in `site.config.ts` is `https://michiganshower.com` — it's what the sitemap, canonical tags, and social preview cards are built from.
 

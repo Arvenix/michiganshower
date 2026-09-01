@@ -24,7 +24,7 @@ const beliefs = [
   {
     icon: "clock" as const,
     title: "You get your bathroom back",
-    body: "We don't start a job we can't staff. Once we begin, we're there until it's finished — not disappearing for a week to start someone else's.",
+    body: "We don't start a job we can't staff. Once we begin, we're there until it's finished, not disappearing for a week to start someone else's.",
   },
   {
     icon: "star" as const,
@@ -53,7 +53,7 @@ export default function AboutPage() {
             <div className="prose-ms mt-6 text-[1.05rem]">
               <p>
                 Plenty of contractors will do a bathroom between other jobs.
-                We&apos;re not that. Showers and baths are the work — the
+                We&apos;re not that. Showers and baths are the work: the
                 waterproofing, the pans, the panel systems, the glass, the
                 accessible fixtures. When you do the same thing every week for
                 years, you stop guessing. You know which materials fail, which
@@ -62,7 +62,7 @@ export default function AboutPage() {
               </p>
               <p>
                 A lot of our work is for people who need their bathroom to
-                change before their life does — a parent who shouldn&apos;t be
+                change before their life does: a parent who shouldn&apos;t be
                 stepping over a tub wall anymore, a veteran with a mobility need
                 the house was never designed for, a couple who want to stay in
                 the home they raised their kids in for another twenty years.
@@ -148,7 +148,7 @@ export default function AboutPage() {
               ))}
             </ul>
             <p className="mt-5 text-sm text-ink-soft">
-              Not on the list? Ask anyway —{" "}
+              Not on the list? Ask anyway:{" "}
               <a
                 href={`mailto:${site.email}`}
                 className="font-semibold text-brand-700 underline underline-offset-4"

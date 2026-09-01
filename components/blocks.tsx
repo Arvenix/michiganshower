@@ -10,7 +10,7 @@ export const pillars = [
   {
     icon: "sparkle" as const,
     title: "Quality",
-    body: "We buy materials that hold up to twenty years of daily water — solid surface and acrylic panels, sealed pans, corrosion-resistant hardware. The cheap version of a shower is the one you replace twice.",
+    body: "We buy materials that hold up to twenty years of daily water: solid surface and acrylic panels, sealed pans, corrosion-resistant hardware. The cheap version of a shower is the one you replace twice.",
   },
   {
     icon: "ruler" as const,
@@ -20,7 +20,7 @@ export const pillars = [
   {
     icon: "shield" as const,
     title: "Built to last",
-    body: "Water finds every shortcut. We waterproof behind the surface, flash the corners properly, and leave you a bathroom that stays dry inside the walls — not just on the day we hand you the keys.",
+    body: "Water finds every shortcut. We waterproof behind the surface, flash the corners properly, and leave you a bathroom that stays dry inside the walls, not just on the day we hand you the keys.",
   },
 ];
 
@@ -30,7 +30,7 @@ export function Pillars({ tone = "cream" }: { tone?: "cream" | "white" }) {
       <SectionHead
         eyebrow="How we work"
         title="Quality. Precision. Built to last."
-        intro="Three words that decide whether a bathroom still looks right in fifteen years — or starts failing quietly behind the wall in three."
+        intro="Three words that decide whether a bathroom still looks right in fifteen years, or starts failing quietly behind the wall in three."
       />
       <div className="mt-12 grid gap-6 md:grid-cols-3">
         {pillars.map((p) => (
@@ -58,7 +58,7 @@ export const spaces = [
     label: "Wet Space",
     title: "The wet space",
     summary:
-      "The shower or tub itself — the part that has to be right, because water is unforgiving.",
+      "The shower or tub itself. The part that has to be right, because water is unforgiving.",
     points: [
       "Walk-in and barrier-free showers",
       "Tub-to-shower conversions",
@@ -78,7 +78,7 @@ export const spaces = [
     label: "Dry Space",
     title: "The dry space",
     summary:
-      "Everything outside the enclosure — where the room stops being a shower and starts being a bathroom.",
+      "Everything outside the enclosure, where the room stops being a shower and starts being a bathroom.",
     points: [
       "Vanities, tops and sinks",
       "Waterproof luxury vinyl and tile flooring",
@@ -97,7 +97,7 @@ export const spaces = [
     label: "Whole Bath",
     title: "The whole bath",
     summary:
-      "Wet and dry together — one crew, one schedule, one person accountable for the finished room.",
+      "Wet and dry together: one crew, one schedule, one person accountable for the finished room.",
     points: [
       "Full gut-to-finish remodels",
       "Layout changes and fixture relocation",
@@ -185,7 +185,7 @@ export function HisaBanner() {
             The VA may pay for your accessible bathroom.
           </h2>
           <p className="mt-4 max-w-xl text-lg leading-relaxed text-brand-100">
-            The HISA grant covers medically necessary home modifications —
+            The HISA grant covers medically necessary home modifications:
             roll-in showers, walk-in tubs, grab bars, widened access. Up to{" "}
             <strong className="font-semibold text-white">$6,800</strong> for
             service-connected needs. We build to what the VA approves and give
@@ -222,7 +222,7 @@ export function HisaBanner() {
 
 export function ClosingCta({
   title = "Tell us about your bathroom.",
-  body = "Send a few details and a photo or two. We'll tell you honestly what the space can do, what it will take, and roughly what it costs — before anyone talks about signing anything.",
+  body = "Send a few details and a photo or two. We'll tell you honestly what the space can do, what it will take, and roughly what it costs, before anyone talks about signing anything.",
 }: {
   title?: string;
   body?: string;

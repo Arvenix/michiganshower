@@ -7,7 +7,7 @@ import { ClosingCta, PageHero } from "@/components/blocks";
 export const metadata: Metadata = {
   title: "VA HISA Grants for Bathroom Modifications",
   description:
-    "The VA's HISA grant helps veterans pay for medically necessary bathroom modifications — roll-in showers, walk-in tubs, grab bars and accessible fixtures. Up to $6,800. Michigan Shower builds to VA-approved scope and provides the itemized estimate your application needs.",
+    "The VA's HISA grant helps veterans pay for medically necessary bathroom modifications: roll-in showers, walk-in tubs, grab bars and accessible fixtures. Up to $6,800. Michigan Shower builds to VA-approved scope and provides the itemized estimate your application needs.",
   alternates: { canonical: "/hisa-grants" },
 };
 
@@ -15,7 +15,7 @@ const tiers = [
   {
     amount: "$6,800",
     who: "Service-connected",
-    body: "The lifetime maximum if the modification is for a service-connected disability — or for a non-service-connected condition when you hold a service-connected rating of 50% or more.",
+    body: "The lifetime maximum if the modification is for a service-connected disability, or for a non-service-connected condition when you hold a service-connected rating of 50% or more.",
   },
   {
     amount: "$2,000",
@@ -43,12 +43,12 @@ const steps = [
   {
     n: "02",
     title: "We measure and quote",
-    body: "We come out, look at the bathroom, and put together an itemized cost estimate broken down the way the VA wants to see it — labor and materials, line by line.",
+    body: "We come out, look at the bathroom, and put together an itemized cost estimate broken down the way the VA wants to see it: labor and materials, line by line.",
   },
   {
     n: "03",
     title: "Submit the application",
-    body: "VA Form 10-0103 goes in with the prescription, the itemized estimate, a color photo of the area, and — if you rent — notarized authorization from the property owner.",
+    body: "VA Form 10-0103 goes in with the prescription, the itemized estimate, a color photo of the area, and, if you rent, notarized authorization from the property owner.",
   },
   {
     n: "04",
@@ -58,7 +58,7 @@ const steps = [
   {
     n: "05",
     title: "We build it",
-    body: "We install to the approved scope, keep the documentation straight, and hand you a bathroom you can actually use — with a final walkthrough before we call it finished.",
+    body: "We install to the approved scope, keep the documentation straight, and hand you a bathroom you can actually use, with a final walkthrough before we call it finished.",
   },
 ];
 
@@ -101,7 +101,7 @@ export default function HisaPage() {
               <p>
                 HISA stands for <strong>Home Improvements and Structural
                 Alterations</strong>. It&apos;s a VA benefit that helps pay for
-                medically necessary changes to a veteran&apos;s home — most
+                medically necessary changes to a veteran&apos;s home, most
                 often to make bathing, entering and exiting safely possible
                 again.
               </p>
@@ -109,7 +109,7 @@ export default function HisaPage() {
                 It is a <strong>lifetime benefit</strong>, not an annual one,
                 and it can be used in more than one piece until the total is
                 spent. Every HISA project has to be{" "}
-                <strong>medically justified</strong> — the VA is paying for a
+                <strong>medically justified</strong>. The VA is paying for a
                 medical need, not for a nicer bathroom, and the paperwork
                 reflects that.
               </p>
@@ -151,7 +151,7 @@ export default function HisaPage() {
             <SectionHead
               eyebrow="Eligible work"
               title="What the grant can cover."
-              intro="The VA names accessible bathing directly — roll-in showers are listed as an example of an eligible improvement. Most of what we build fits inside this list."
+              intro="The VA names accessible bathing directly: roll-in showers are listed as an example of an eligible improvement. Most of what we build fits inside this list."
             />
             <ul className="mt-8 space-y-3">
               {covered.map((c) => (
@@ -232,7 +232,7 @@ export default function HisaPage() {
               "A completed VA Form 10-0103",
               "An itemized cost estimate from your contractor",
               "A color photograph of the area to be modified",
-              "Property-owner authorization — notarized if you rent",
+              "Property-owner authorization, notarized if you rent",
             ].map((d) => (
               <li
                 key={d}
@@ -322,7 +322,7 @@ export default function HisaPage() {
               endorsed by, or an agent of the U.S. Department of Veterans
               Affairs, and we can&apos;t approve, deny, or speed up a grant.
               What we can do is build the work correctly and give you accurate
-              paperwork. Everything on this page is general information — the VA
+              paperwork. Everything on this page is general information. The VA
               is the authority on your eligibility, and program details can
               change.
             </p>
@@ -332,7 +332,7 @@ export default function HisaPage() {
 
       <ClosingCta
         title="Starting a HISA application?"
-        body="Send us the bathroom details and we'll get you an itemized estimate you can file — no charge, no obligation, and no pressure to use us if the VA approves something else."
+        body="Send us the bathroom details and we'll get you an itemized estimate you can file. No charge, no obligation, and no pressure to use us if the VA approves something else."
       />
     </>
   );

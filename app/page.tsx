@@ -19,7 +19,7 @@ const steps = [
   {
     n: "02",
     title: "You see the plan and the number",
-    body: "An itemized estimate with the materials named. If something in your idea won't work in that space, we tell you then — not after demolition.",
+    body: "An itemized estimate with the materials named. If something in your idea won't work in that space, we tell you then, not after demolition.",
   },
   {
     n: "03",
@@ -55,7 +55,7 @@ export default function HomePage() {
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-brand-100">
                 Walk-in showers, walk-in tubs, barrier-free bathing and full
-                bathroom remodels — installed with the kind of care that still
+                bathroom remodels, installed with the kind of care that still
                 shows fifteen years from now.
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
@@ -118,9 +118,9 @@ export default function HomePage() {
               <p>
                 That&apos;s the whole reason {site.name} exists. Showers and
                 tubs take more abuse than any other part of a home, and they
-                punish shortcuts quietly — behind the panel, under the pan,
-                inside the wall — until one day the floor is soft and the bill
-                is enormous.
+                punish shortcuts quietly, in places nobody can see: behind
+                the panel, under the pan, inside the wall. One day the floor is
+                soft and the bill is enormous.
               </p>
               <p>
                 So we do it the slow way. Level pans. Blocking behind every grab
@@ -131,9 +131,9 @@ export default function HomePage() {
               <p>
                 We work across {site.serviceAreaLong}, on everything from a
                 single tub-to-shower conversion to a gut remodel of the whole
-                room. A lot of what we build is accessible bathing — walk-in
+                room. A lot of what we build is accessible bathing: walk-in
                 tubs, roll-in showers, grab bars placed where someone can
-                actually reach them — for homeowners who want to stay in the
+                actually reach them, for homeowners who want to stay in the
                 house they already love.
               </p>
             </div>
@@ -195,7 +195,7 @@ export default function HomePage() {
           <SectionHead
             eyebrow="Past jobs"
             title="Work we've finished."
-            intro="Real Michigan bathrooms — walk-in tubs, roll-in showers, conversions and full remodels."
+            intro="Real Michigan bathrooms: walk-in tubs, roll-in showers, conversions and full remodels."
           />
           <Link
             href="/gallery"

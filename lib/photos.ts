@@ -11,7 +11,7 @@ export type Photo = {
 
 /**
  * Past-project photography. To add a job: drop the image in
- * /public/photos and add an entry here. Keep `w`/`h` accurate —
+ * /public/photos and add an entry here. Keep `w`/`h` accurate:
  * they prevent layout shift while the image loads.
  */
 export const photos: Photo[] = [
@@ -28,7 +28,7 @@ export const photos: Photo[] = [
     src: "/photos/shower-shelf-tower.jpg",
     alt: "Shower with a full-height recessed shelf tower between vertical stone-look panels",
     caption:
-      "Full-height recessed shelf tower centered between vertical stone-look panels — storage without a single grout line.",
+      "Full-height recessed shelf tower centered between vertical stone-look panels. Storage without a single grout line.",
     category: "Showers",
     w: 1350,
     h: 1800,
@@ -73,7 +73,7 @@ export const photos: Photo[] = [
     src: "/photos/glass-enclosure-shower.jpg",
     alt: "Sliding glass shower enclosure over a low-threshold base with a horizontal grab bar",
     caption:
-      "Sliding glass enclosure over a low-threshold base — open, bright, and easy to step into.",
+      "Sliding glass enclosure over a low-threshold base: open, bright, and easy to step into.",
     category: "Showers",
     w: 1350,
     h: 1800,
@@ -100,7 +100,7 @@ export const photos: Photo[] = [
     src: "/photos/hand-shower-slide-bar.jpg",
     alt: "Adjustable slide-bar hand shower next to an angled transfer grab bar",
     caption:
-      "Adjustable slide-bar hand shower beside an angled transfer bar — usable seated or standing.",
+      "Adjustable slide-bar hand shower beside an angled transfer bar, usable seated or standing.",
     category: "Accessibility",
     w: 1350,
     h: 1800,

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const expect = [
   "We reply within one business day.",
-  "We'll ask a few questions before quoting anything — square footage, what's there now, any mobility needs.",
+  "We'll ask a few questions before quoting anything: square footage, what's there now, any mobility needs.",
   "The in-home consultation is free, and it stays a consultation. No same-day pricing games.",
   "If we're not the right fit for your job, we'll say so.",
 ];

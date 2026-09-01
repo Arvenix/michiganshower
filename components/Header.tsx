@@ -40,7 +40,7 @@ export default function Header() {
           <Link
             href="/"
             className="flex shrink-0 items-center gap-3"
-            aria-label={`${site.name} — home`}
+            aria-label={`${site.name} home page`}
           >
             <Image
               src="/brand/mark-blue.png"

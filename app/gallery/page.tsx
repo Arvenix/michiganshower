@@ -5,7 +5,7 @@ import Gallery from "@/components/Gallery";
 import { ClosingCta, PageHero } from "@/components/blocks";
 
 export const metadata: Metadata = {
-  title: "Gallery — Past Jobs",
+  title: "Gallery: Past Jobs",
   description:
     "Photos of completed Michigan Shower projects: walk-in showers, walk-in tubs, tub-to-shower conversions, roll-in bases and accessible bathroom remodels across Michigan.",
   alternates: { canonical: "/gallery" },
@@ -17,7 +17,7 @@ export default function GalleryPage() {
       <PageHero
         eyebrow="Gallery"
         title="Past jobs."
-        intro={`Bathrooms we've finished for homeowners around ${site.serviceArea} — walk-in tubs, barrier-free showers, conversions and full remodels. Click any photo to see it larger.`}
+        intro={`Bathrooms we've finished for homeowners around ${site.serviceArea}: walk-in tubs, barrier-free showers, conversions and full remodels. Click any photo to see it larger.`}
       />
 
       <Section tone="cream">

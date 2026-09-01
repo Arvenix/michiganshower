@@ -1,9 +1,9 @@
 /**
  * ─────────────────────────────────────────────────────────────
- *  MICHIGAN SHOWER, LLC — SITE CONFIGURATION
+ *  MICHIGAN SHOWER, LLC SITE CONFIGURATION
  * ─────────────────────────────────────────────────────────────
  *  This is the ONLY file you need to edit for day-to-day changes.
- *  Everything marked TODO is a placeholder — replace it before
+ *  Everything marked TODO is a placeholder. Replace it before
  *  you go live. Search the file for "TODO" to find them all.
  */
 
@@ -14,7 +14,7 @@ export const site = {
   tagline: "Professional Shower and Bath Installers",
 
   description:
-    "Michigan Shower, LLC designs and installs walk-in showers, walk-in tubs, barrier-free bathing and full bath remodels across Michigan. Quality, precision, and built to last — with your vision.",
+    "Michigan Shower, LLC designs and installs walk-in showers, walk-in tubs, barrier-free bathing and full bath remodels across Michigan. Quality, precision, and built to last, with your vision.",
 
   // ── Contact ────────────────────────────────────────────────
   email: "info@michiganshower.com",
@@ -51,7 +51,7 @@ export const site = {
     zip: "",
   },
 
-  hours: "Monday – Friday, 8:00 AM – 5:00 PM",
+  hours: "Monday to Friday, 8:00 AM to 5:00 PM",
 
   // ── Trust badges shown under the homepage hero ─────────────
   // Only claim what you can back up. Edit or delete freely.
@@ -63,7 +63,7 @@ export const site = {
   ],
 
   // ── Contact form ───────────────────────────────────────────
-  // Free key from https://web3forms.com — enter info@michiganshower.com,
+  // Free key from https://web3forms.com. Enter info@michiganshower.com,
   // they email you an access key, paste it here. No account needed.
   // Until this is filled in, the form falls back to opening the
   // visitor's email client instead of silently failing.
@@ -81,7 +81,7 @@ export const site = {
   // contractor license number if you want it displayed.
   licenseNumber: "",
 
-  foundedYear: "", // TODO e.g. "2014" — used in About copy if set
+  foundedYear: "", // TODO e.g. "2014", used in About copy if set
 };
 
 export const nav = [

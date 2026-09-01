@@ -23,7 +23,7 @@ export default function Footer() {
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-brand-200">
               {site.name} designs and installs walk-in showers, walk-in tubs and
               full bath remodels across {site.serviceAreaLong}. Quality,
-              precision, and built to last — with your vision.
+              precision, and built to last, with your vision.
             </p>
 
             {site.licenseNumber && (

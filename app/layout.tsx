@@ -21,7 +21,7 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — ${site.tagline}`,
+    default: `${site.name} | ${site.tagline}`,
     template: `%s | ${site.shortName}`,
   },
   description: site.description,
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: site.url,
     siteName: site.name,
-    title: `${site.name} — ${site.tagline}`,
+    title: `${site.name} | ${site.tagline}`,
     description: site.description,
     images: [
       {
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — ${site.tagline}`,
+    title: `${site.name} | ${site.tagline}`,
     description: site.description,
     images: ["/brand/og.jpg"],
   },
@@ -74,7 +74,7 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-/** LocalBusiness structured data — helps Google show you in local results. */
+/** LocalBusiness structured data. Helps Google show you in local results. */
 function StructuredData() {
   const hasStreet = site.address.street.length > 0;
   const data = {
@@ -118,7 +118,7 @@ function StructuredData() {
       "Accessible bathroom remodeling",
       "VA HISA grant bathroom modifications",
     ],
-    slogan: "Quality. Precision. Built to last — with your vision.",
+    slogan: "Quality. Precision. Built to last, with your vision.",
   };
 
   return (
