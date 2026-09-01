@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand blue — sampled directly from the Michigan Shower logo (#3c81ab) */
+  --color-brand-50: #f2f8fb;
+  --color-brand-100: #e0eef5;
+  --color-brand-200: #bedcea;
+  --color-brand-300: #90c1d9;
+  --color-brand-400: #5d9fc2;
+  --color-brand-500: #3c81ab;
+  --color-brand-600: #2e6a8f;
+  --color-brand-700: #275775;
+  --color-brand-800: #234862;
+  --color-brand-900: #1d3b51;
+  --color-brand-950: #102434;
+
+  /* Cream — the logo's background field */
+  --color-cream-50: #fdfaf5;
+  --color-cream-100: #f8f0e4;
+  --color-cream-200: #f0e3d0;
+  --color-cream-300: #e3d0b6;
+
+  --color-ink: #12202b;
+  --color-ink-soft: #47606f;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, "Times New Roman",
+    serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--color-brand-200);
+    color: var(--color-brand-950);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-brand-500);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  /* Display headings: serif, tight, optically balanced */
+  .h-display {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-brand-600);
+  }
+
+  .prose-ms p {
+    color: var(--color-ink-soft);
+    line-height: 1.75;
+  }
+  .prose-ms p + p {
+    margin-top: 1.15rem;
+  }
+}
+
+/* Respect users who ask for less motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
