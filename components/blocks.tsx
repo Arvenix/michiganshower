@@ -192,7 +192,7 @@ export function HisaBanner() {
             you the itemized estimate your application requires.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button href="/hisa-grants" variant="onDark">
+            <Button href="/hisa-grants" variant="onDarkQuiet">
               How HISA works
               <Icon name="arrowRight" className="h-4 w-4" />
             </Button>

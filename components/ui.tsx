@@ -96,7 +96,13 @@ export function SectionHead({
 type ButtonProps = {
   href: string;
   children: ReactNode;
-  variant?: "primary" | "secondary" | "ghost" | "onDark" | "outlineOnDark";
+  variant?:
+    | "primary"
+    | "secondary"
+    | "ghost"
+    | "onDark"
+    | "onDarkQuiet"
+    | "outlineOnDark";
   className?: string;
 };
 
@@ -104,12 +110,15 @@ const base =
   "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold tracking-wide transition-colors duration-200";
 
 const variants = {
-  primary: "bg-brand-600 text-white hover:bg-brand-700",
+  // COPPER = the action color. Only ever on something that turns a
+  // visitor into a lead. See globals.css.
+  primary: "bg-copper-600 text-white hover:bg-copper-700",
   secondary:
     "bg-white text-brand-700 ring-1 ring-inset ring-brand-200 hover:bg-brand-50",
   ghost:
     "bg-transparent text-ink ring-1 ring-inset ring-ink/15 hover:bg-ink/5",
-  onDark: "bg-white text-brand-800 hover:bg-cream-100",
+  onDark: "bg-copper-500 text-white hover:bg-copper-600",
+  onDarkQuiet: "bg-white text-brand-800 hover:bg-cream-100",
   outlineOnDark:
     "bg-transparent text-white ring-1 ring-inset ring-white/35 hover:bg-white/10",
 } as const;

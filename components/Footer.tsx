@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { nav, site } from "@/site.config";
+import { nav, secondaryNav, site } from "@/site.config";
+import { cities } from "@/lib/cities";
 import { Container, Icon } from "./ui";
 
 export default function Footer() {
@@ -11,7 +12,7 @@ export default function Footer() {
       <Container className="py-16">
         <div className="grid gap-12 md:grid-cols-12">
           {/* Brand */}
-          <div className="md:col-span-5">
+          <div className="md:col-span-4">
             <Image
               src="/brand/mark-white.png"
               alt=""
@@ -34,18 +35,39 @@ export default function Footer() {
           </div>
 
           {/* Nav */}
-          <div className="md:col-span-3">
+          <div className="md:col-span-2">
             <h2 className="text-xs font-bold uppercase tracking-[0.14em] text-brand-300">
               Explore
             </h2>
             <ul className="mt-5 space-y-3 text-sm">
-              {nav.map((item) => (
-                <li key={item.href}>
+              {[{ href: "/", label: "Home" }, ...nav, ...secondaryNav].map(
+                (item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="text-brand-100 transition-colors hover:text-white"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ),
+              )}
+            </ul>
+          </div>
+
+          {/* Service areas */}
+          <div className="md:col-span-2">
+            <h2 className="text-xs font-bold uppercase tracking-[0.14em] text-brand-300">
+              Service areas
+            </h2>
+            <ul className="mt-5 space-y-3 text-sm">
+              {cities.map((c) => (
+                <li key={c.slug}>
                   <Link
-                    href={item.href}
+                    href={`/service-areas/${c.slug}`}
                     className="text-brand-100 transition-colors hover:text-white"
                   >
-                    {item.label}
+                    {c.name}
                   </Link>
                 </li>
               ))}
@@ -90,7 +112,7 @@ export default function Footer() {
 
             <Link
               href="/contact"
-              className="mt-7 inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-brand-800 transition-colors hover:bg-cream-100"
+              className="mt-7 inline-flex rounded-full bg-copper-500 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-copper-600"
             >
               Request a Free Consultation
             </Link>

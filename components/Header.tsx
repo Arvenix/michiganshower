@@ -36,7 +36,7 @@ export default function Header() {
       }`}
     >
       <Container>
-        <div className="flex h-20 items-center justify-between gap-6">
+        <div className="flex h-20 items-center justify-between gap-4">
           <Link
             href="/"
             className="flex shrink-0 items-center gap-3"
@@ -52,10 +52,10 @@ export default function Header() {
               className="h-11 w-auto"
             />
             <span className="flex flex-col leading-none">
-              <span className="text-[1.02rem] font-bold tracking-tight text-brand-700 sm:text-[1.15rem]">
+              <span className="whitespace-nowrap text-[1rem] font-bold tracking-tight text-brand-700">
                 MICHIGAN SHOWER
               </span>
-              <span className="mt-1 text-[0.6rem] font-semibold tracking-[0.18em] text-ink-soft">
+              <span className="mt-1 whitespace-nowrap text-[0.58rem] font-semibold tracking-[0.16em] text-ink-soft">
                 SHOWER &amp; BATH INSTALLERS
               </span>
             </span>
@@ -63,20 +63,17 @@ export default function Header() {
 
           {/* Desktop nav */}
           <nav
-            className="hidden items-center gap-1 lg:flex"
+            className="hidden items-center gap-0.5 xl:flex"
             aria-label="Primary"
           >
             {nav.map((item) => {
-              const active =
-                item.href === "/"
-                  ? pathname === "/"
-                  : pathname.startsWith(item.href);
+              const active = pathname.startsWith(item.href);
               return (
                 <Link
                   key={item.href}
                   href={item.href}
                   aria-current={active ? "page" : undefined}
-                  className={`rounded-full px-3.5 py-2 text-sm font-medium transition-colors ${
+                  className={`whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium transition-colors ${
                     active
                       ? "bg-brand-50 text-brand-700"
                       : "text-ink-soft hover:text-brand-700"
@@ -92,15 +89,20 @@ export default function Header() {
             {site.showPhone && (
               <a
                 href={`tel:${site.phoneHref}`}
-                className="hidden items-center gap-2 text-sm font-semibold text-brand-700 md:inline-flex"
+                className="hidden flex-col items-end leading-none md:flex"
               >
-                <Icon name="phone" className="h-4 w-4" />
-                {site.phone}
+                <span className="text-[0.6rem] font-bold uppercase tracking-[0.14em] text-ink-soft">
+                  Call us
+                </span>
+                <span className="mt-1 inline-flex items-center gap-1.5 whitespace-nowrap text-[0.95rem] font-bold text-brand-700">
+                  <Icon name="phone" className="h-4 w-4" />
+                  {site.phone}
+                </span>
               </a>
             )}
             <Link
               href="/contact"
-              className="hidden rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700 sm:inline-flex"
+              className="hidden whitespace-nowrap rounded-full bg-copper-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-copper-700 sm:inline-flex"
             >
               Free Consultation
             </Link>
@@ -111,7 +113,7 @@ export default function Header() {
               aria-expanded={open}
               aria-controls="mobile-menu"
               aria-label={open ? "Close menu" : "Open menu"}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full text-ink ring-1 ring-inset ring-ink/12 lg:hidden"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full text-ink ring-1 ring-inset ring-ink/12 xl:hidden"
             >
               <Icon name={open ? "close" : "menu"} className="h-5 w-5" />
             </button>
@@ -123,15 +125,12 @@ export default function Header() {
       {open && (
         <div
           id="mobile-menu"
-          className="border-t border-ink/10 bg-white lg:hidden"
+          className="border-t border-ink/10 bg-white xl:hidden"
         >
           <Container className="py-4">
             <nav className="flex flex-col" aria-label="Mobile">
               {nav.map((item) => {
-                const active =
-                  item.href === "/"
-                    ? pathname === "/"
-                    : pathname.startsWith(item.href);
+                const active = pathname.startsWith(item.href);
                 return (
                   <Link
                     key={item.href}
@@ -151,10 +150,18 @@ export default function Header() {
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="rounded-full bg-brand-600 px-5 py-3.5 text-center text-sm font-semibold text-white"
+                className="rounded-full bg-copper-600 px-5 py-3.5 text-center text-sm font-semibold text-white"
               >
                 Request a Free Consultation
               </Link>
+              {site.showPhone && (
+                <a
+                  href={`tel:${site.phoneHref}`}
+                  className="rounded-full px-5 py-3.5 text-center text-sm font-semibold text-brand-700 ring-1 ring-inset ring-brand-200"
+                >
+                  Call {site.phone}
+                </a>
+              )}
               <a
                 href={`mailto:${site.email}`}
                 className="rounded-full px-5 py-3.5 text-center text-sm font-semibold text-brand-700 ring-1 ring-inset ring-brand-200"

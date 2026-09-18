@@ -81,7 +81,7 @@ export default function ContactForm() {
   if (status === "sent") {
     return (
       <div className="rounded-2xl bg-brand-50 p-10 text-center ring-1 ring-brand-200">
-        <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-brand-600 text-white">
+        <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-copper-600 text-white">
           <Icon name="check" className="h-7 w-7" />
         </span>
         <h3 className="h-display mt-5 text-2xl text-ink">Message received</h3>
@@ -220,7 +220,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-600 px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-brand-700 disabled:opacity-60 sm:w-auto"
+        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-copper-600 px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-copper-700 disabled:opacity-60 sm:w-auto"
       >
         {status === "sending" ? "Sending…" : "Send my request"}
         {status !== "sending" && (
