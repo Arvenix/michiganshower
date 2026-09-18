@@ -10,7 +10,7 @@ Everything you need to change lives in **one file: `site.config.ts`**. Open it a
 
 | What | Where | Why it matters |
 |---|---|---|
-| **Phone number** | `site.config.ts` → `phone`, `phoneHref` | Currently a placeholder and **hidden**. Set `showPhone: true` once the real number is in. |
+| **Phone number** | `site.config.ts` → `phone`, `phoneHref` | Live: **(833) 637-8466**. Change it in one place and it updates the header, footer, mobile call bar and every page. |
 | **Contact form key** | `site.config.ts` → `web3formsKey` | Without it the form falls back to opening the visitor's email app. See below. |
 | **Business address** | `site.config.ts` → `address` | Only fill in if you have a storefront you want on the map. Leave blank for a service-area business. |
 | **License number** | `site.config.ts` → `licenseNumber` | Shows in the footer when set. Left blank on purpose — add your real one. |
@@ -101,10 +101,42 @@ Page copy lives directly in the page files — plain JSX, safe to edit:
 | Home | `app/page.tsx` |
 | About | `app/about/page.tsx` |
 | Services | `app/services/page.tsx` |
+| Products (overview) | `app/products/page.tsx` |
+| Each product line | `lib/products.ts` (data) + `app/products/[slug]/page.tsx` |
 | Gallery | `app/gallery/page.tsx` |
+| What It Costs | `app/cost/page.tsx` |
+| FAQ | `app/faq/page.tsx` |
+| Our Promise | `app/promise/page.tsx` |
 | HISA Grants | `app/hisa-grants/page.tsx` |
+| City pages | `lib/cities.ts` (data) + `app/service-areas/[city]/page.tsx` |
 | Contact | `app/contact/page.tsx` |
 | 404 page | `app/not-found.tsx` |
+
+### Adding a city page
+
+Add an entry to `lib/cities.ts` and the page, the sitemap and the footer
+link all appear automatically. **Only add a city you can say something
+true and specific about.** Templated filler with the city name swapped in
+is exactly what the national chains do, and it is why their location
+pages rank badly and read worse.
+
+### The copper rule
+
+`#95542f` copper is the action color and it is reserved for one job:
+things a visitor clicks to become a lead. Nothing else on the site is
+copper. If you add a button that is not a call, a form, or a consultation
+request, use `variant="secondary"`, not the default. This is what makes
+the eye find the next action on every screen.
+
+### Product imagery
+
+Everything under `public/products/` is manufacturer photography from
+Samuel Mueller and is labelled as such on every page it appears on.
+Photos of your own jobs live in `lib/photos.ts` and appear only in the
+gallery. **Do not mix them.** Two of your national competitors are
+currently disclosing that their galleries may contain AI-generated
+imagery; keeping this line clean is a real advantage and the site says
+so out loud.
 
 Shared blocks — the three pillars, the wet/dry/whole-bath cards, the HISA banner, the closing call-to-action — live in `components/blocks.tsx` so they only have to be edited once.
 

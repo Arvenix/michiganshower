@@ -1,13 +1,29 @@
 import type { MetadataRoute } from "next";
-import { nav, site } from "@/site.config";
+import { nav, secondaryNav, site } from "@/site.config";
+import { products } from "@/lib/products";
+import { cities } from "@/lib/cities";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
-  return nav.map((item) => ({
-    url: `${site.url}${item.href === "/" ? "" : item.href}`,
+  const routes: { href: string; priority: number }[] = [
+    { href: "/", priority: 1 },
+    ...nav.map((n) => ({
+      href: n.href,
+      priority: n.href === "/contact" ? 0.9 : 0.8,
+    })),
+    ...secondaryNav.map((n) => ({ href: n.href, priority: 0.6 })),
+    ...products.map((p) => ({ href: `/products/${p.slug}`, priority: 0.7 })),
+    ...cities.map((c) => ({
+      href: `/service-areas/${c.slug}`,
+      priority: 0.7,
+    })),
+  ];
+
+  return routes.map((r) => ({
+    url: `${site.url}${r.href === "/" ? "" : r.href}`,
     lastModified: now,
-    changeFrequency: item.href === "/" ? "weekly" : "monthly",
-    priority: item.href === "/" ? 1 : item.href === "/contact" ? 0.9 : 0.8,
+    changeFrequency: r.href === "/" ? "weekly" : "monthly",
+    priority: r.priority,
   }));
 }

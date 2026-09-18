@@ -14,6 +14,20 @@
   --color-brand-900: #1d3b51;
   --color-brand-950: #102434;
 
+  /* Copper — the ACTION color. Reserved exclusively for things a
+     visitor can click to become a lead. Nothing else on the site
+     is copper. Complementary to the brand blue, and it reads as
+     brushed-bronze fixture hardware. */
+  --color-copper-50: #fdf6f1;
+  --color-copper-100: #f6e5d8;
+  --color-copper-200: #ead0bb;
+  --color-copper-300: #d9a87f;
+  --color-copper-400: #c5854f;
+  --color-copper-500: #b0663a;
+  --color-copper-600: #95542f;
+  --color-copper-700: #7a4527;
+  --color-copper-800: #653a22;
+
   /* Cream — the logo's background field */
   --color-cream-50: #fdfaf5;
   --color-cream-100: #f8f0e4;

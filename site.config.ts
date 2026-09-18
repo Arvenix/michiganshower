@@ -19,15 +19,11 @@ export const site = {
   // ── Contact ────────────────────────────────────────────────
   email: "info@michiganshower.com",
 
-  // TODO: replace with your real business number.
-  // Format the display version how you want it read aloud;
-  // `phoneHref` must be digits only with a leading +1.
-  phone: "(555) 555-5555",
-  phoneHref: "+15555555555",
+  phone: "(833) 637-8466",
+  phoneHref: "+18336378466",
 
-  // Set to false to hide every phone number on the site until
-  // you have a real one to publish.
-  showPhone: false,
+  // Set to false to hide every phone number on the site.
+  showPhone: true,
 
   // ── Service area ───────────────────────────────────────────
   serviceArea: "Michigan",
@@ -85,10 +81,17 @@ export const site = {
 };
 
 export const nav = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
+  { href: "/products", label: "Products" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/cost", label: "Costs" },
   { href: "/hisa-grants", label: "HISA Grants" },
+  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
+] as const;
+
+/** Secondary links: footer and sitemap only, not the header. */
+export const secondaryNav = [
+  { href: "/promise", label: "Our Promise" },
+  { href: "/faq", label: "FAQ" },
 ] as const;

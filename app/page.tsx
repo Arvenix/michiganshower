@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/site.config";
 import { photos } from "@/lib/photos";
+import { products } from "@/lib/products";
 import { Button, Container, Icon, Section, SectionHead } from "@/components/ui";
 import {
   ClosingCta,
@@ -164,8 +165,85 @@ export default function HomePage() {
       {/* ── Wet / dry / whole ────────────────────────────────── */}
       <SpacesGrid />
 
+      {/* ── What we install ──────────────────────────────────── */}
+      <Section tone="cream">
+        <div className="flex flex-wrap items-end justify-between gap-6">
+          <SectionHead
+            eyebrow="What we install"
+            title="Samuel Mueller wall systems and bases."
+            intro="Grout-free surfaces that do not need sealing, solid-surface bases that do not flex, and a zero-threshold option that makes a genuine roll-in shower possible."
+          />
+          <Link
+            href="/products"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-brand-700 hover:text-brand-800"
+          >
+            Compare the lines
+            <Icon name="arrowRight" className="h-4 w-4" />
+          </Link>
+        </div>
+        <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {products.map((p) => (
+            <li key={p.slug}>
+              <Link
+                href={`/products/${p.slug}`}
+                className="group block overflow-hidden rounded-2xl bg-white ring-1 ring-ink/8"
+              >
+                <div className="aspect-4/3 overflow-hidden bg-cream-200">
+                  <Image
+                    src={p.hero.src}
+                    alt={p.hero.alt}
+                    width={p.hero.w}
+                    height={p.hero.h}
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="h-display text-lg text-ink">{p.name}</h3>
+                  <p className="mt-1 text-[0.85rem] leading-snug text-ink-soft">
+                    {p.tagline}
+                  </p>
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-6 text-xs text-ink-soft">
+          Product images supplied by Samuel Mueller. Every photo in{" "}
+          <Link href="/gallery" className="underline underline-offset-2">
+            our gallery
+          </Link>{" "}
+          is a bathroom we built.
+        </p>
+      </Section>
+
       {/* ── Pillars ──────────────────────────────────────────── */}
-      <Pillars tone="cream" />
+      <Pillars tone="white" />
+
+      {/* ── The promise ──────────────────────────────────────── */}
+      <Section tone="cream">
+        <div className="rounded-3xl bg-white p-8 ring-1 ring-ink/8 sm:p-12">
+          <div className="grid items-center gap-8 lg:grid-cols-12 lg:gap-12">
+            <div className="lg:col-span-8">
+              <p className="eyebrow">How we sell</p>
+              <h2 className="h-display mt-3 text-3xl text-ink sm:text-4xl">
+                No countdown timers. No discount that expires tonight.
+              </h2>
+              <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft">
+                You get a written quote that is good for thirty days, and we
+                will not ask you to sign on the first visit. If a price drops
+                because you hesitated, it was never the price.
+              </p>
+            </div>
+            <div className="lg:col-span-4 lg:text-right">
+              <Button href="/promise" variant="secondary">
+                Read our promise
+                <Icon name="arrowRight" className="h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </Section>
 
       {/* ── Process ──────────────────────────────────────────── */}
       <Section tone="white">
