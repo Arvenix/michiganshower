@@ -10,17 +10,17 @@ export const pillars = [
   {
     icon: "sparkle" as const,
     title: "Quality",
-    body: "We buy materials that hold up to twenty years of daily water: solid surface and acrylic panels, sealed pans, corrosion-resistant hardware. The cheap version of a shower is the one you replace twice.",
+    body: "Solid surface wall systems with the color running through the full thickness, bases set in a full mortar bed, corrosion-resistant hardware throughout. A shower specified down to a price is a shower you buy twice.",
   },
   {
     icon: "ruler" as const,
     title: "Precision",
-    body: "Every pan is set level and pitched to the drain. Every panel seam is cut to the wall, not caulked over. Grab bars land in blocking, not drywall anchors. The details you can't see are the ones that decide how long it lasts.",
+    body: "Bases set dead level and pitched to the drain. Panel seams cut to the wall rather than closed with caulk. Grab bars anchored into structural blocking. Precision is invisible by definition, which is exactly why it is the first thing a cheaper crew gives up.",
   },
   {
     icon: "shield" as const,
     title: "Built to last",
-    body: "Water finds every shortcut. We waterproof behind the surface, flash the corners properly, and leave you a bathroom that stays dry inside the walls, not just on the day we hand you the keys.",
+    body: "Water finds every shortcut eventually. We waterproof behind the surface and detail the corners properly, so the wall cavity is still dry long after the day we hand the room over.",
   },
 ];
 
@@ -30,7 +30,7 @@ export function Pillars({ tone = "cream" }: { tone?: "cream" | "white" }) {
       <SectionHead
         eyebrow="How we work"
         title="Quality. Precision. Built to last."
-        intro="Three words that decide whether a bathroom still looks right in fifteen years, or starts failing quietly behind the wall in three."
+        intro="Three commitments that decide whether a bathroom still performs in year fifteen or begins failing quietly behind the wall in year three."
       />
       <div className="mt-12 grid gap-6 md:grid-cols-3">
         {pillars.map((p) => (
@@ -58,19 +58,19 @@ export const spaces = [
     label: "Wet Space",
     title: "The wet space",
     summary:
-      "The shower or tub itself. The part that has to be right, because water is unforgiving.",
+      "The shower or tub itself, where there is no margin for error and water punishes every shortcut.",
     points: [
       "Walk-in and barrier-free showers",
       "Tub-to-shower conversions",
       "Walk-in and step-in tubs",
       "Roll-in bases set flush to the floor",
       "Waterproofed pans, curbs and corners",
-      "Solid-surface and acrylic wall systems",
+      "Grout-free solid surface wall systems",
       "Glass doors and enclosures",
       "Niches, benches, shelf towers",
       "Reinforced grab bars and hand showers",
     ],
-    photo: photos.find((p) => p.src.includes("shelf-tower"))!,
+    photo: photos[1],
   },
   {
     slug: "dry-space",
@@ -78,7 +78,7 @@ export const spaces = [
     label: "Dry Space",
     title: "The dry space",
     summary:
-      "Everything outside the enclosure, where the room stops being a shower and starts being a bathroom.",
+      "Everything outside the enclosure: the vanity, the flooring, the lighting, the ventilation and the storage.",
     points: [
       "Vanities, tops and sinks",
       "Waterproof luxury vinyl and tile flooring",
@@ -89,7 +89,7 @@ export const spaces = [
       "Wider doorways for walker access",
       "Slip-resistant flooring throughout",
     ],
-    photo: photos.find((p) => p.src.includes("tiled-surround"))!,
+    photo: photos[7],
   },
   {
     slug: "whole-bath",
@@ -97,7 +97,7 @@ export const spaces = [
     label: "Whole Bath",
     title: "The whole bath",
     summary:
-      "Wet and dry together: one crew, one schedule, one person accountable for the finished room.",
+      "Wet and dry together, under one crew, one schedule and one person accountable for the finished room.",
     points: [
       "Full gut-to-finish remodels",
       "Layout changes and fixture relocation",
@@ -107,7 +107,7 @@ export const spaces = [
       "Permits pulled where required",
       "One point of contact from first visit to walkthrough",
     ],
-    photo: photos.find((p) => p.src.includes("walk-in-tub-subway"))!,
+    photo: photos[11],
   },
 ];
 
@@ -117,7 +117,7 @@ export function SpacesGrid() {
       <SectionHead
         eyebrow="What we build"
         title="Wet space. Dry space. Whole bath."
-        intro="Take on the part that needs the most help, or hand us the whole room. Either way you get the same crew and the same standard."
+        intro="Address the part of the room that needs it most, or commission the whole bathroom. The crew and the standard do not change."
       />
       <div className="mt-12 grid gap-6 lg:grid-cols-3">
         {spaces.map((s) => (
@@ -204,10 +204,10 @@ export function HisaBanner() {
         <div className="lg:col-span-5">
           <div className="overflow-hidden rounded-2xl ring-1 ring-white/15">
             <Image
-              src="/photos/roll-in-shower-low-threshold.jpg"
-              alt="Roll-in shower base set nearly flush with the bathroom floor"
-              width={1800}
-              height={1350}
+              src="/products/bases/base-ada-grab-bars.jpg"
+              alt="Zero-threshold shower with grab bars and a slide-bar hand shower"
+              width={1496}
+              height={1500}
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="h-full w-full object-cover"
             />
@@ -222,7 +222,7 @@ export function HisaBanner() {
 
 export function ClosingCta({
   title = "Tell us about your bathroom.",
-  body = "Send a few details and a photo or two. We'll tell you honestly what the space can do, what it will take, and roughly what it costs, before anyone talks about signing anything.",
+  body = "Send a few details and a photo or two of the room as it stands today. We will tell you what the space can realistically become, what reaching that involves, and what drives the number, well before anyone discusses signing anything.",
 }: {
   title?: string;
   body?: string;

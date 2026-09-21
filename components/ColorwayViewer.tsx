@@ -58,8 +58,7 @@ export default function ColorwayViewer({
         <p className="mt-3 text-xs text-ink-soft">
           {active.room
             ? `${lineName} in ${label}.`
-            : `${lineName} in ${label}. Sample shown at close range; no room render available for this colorway.`}{" "}
-          Manufacturer image, supplied by Samuel Mueller.
+            : `${lineName} in ${label}. Sample shown at close range.`}
         </p>
       </div>
 

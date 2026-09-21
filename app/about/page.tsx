@@ -14,22 +14,22 @@ const beliefs = [
   {
     icon: "check" as const,
     title: "The estimate is the price",
-    body: "We price the job after we've looked at it, not before. If we find something genuinely unexpected behind a wall, we stop and show you before we spend your money.",
+    body: "We price a project after we have seen it, never before. If something genuinely unexpected turns up behind a wall, we stop, show you, and agree the next step before spending another dollar of your money.",
   },
   {
     icon: "accessible" as const,
-    title: "Accessibility isn't an add-on",
-    body: "Grab bars go into blocking. Thresholds go low. Hand showers go where someone seated can reach them. We'd rather build it right the first time than retrofit it in five years.",
+    title: "Accessibility is engineered in",
+    body: "Grab bars land in structural blocking. Thresholds go flush. Hand showers are positioned to be reached from a seated position. Building it correctly the first time costs less than retrofitting it in five years.",
   },
   {
     icon: "clock" as const,
-    title: "You get your bathroom back",
-    body: "We don't start a job we can't staff. Once we begin, we're there until it's finished, not disappearing for a week to start someone else's.",
+    title: "Your bathroom comes back on schedule",
+    body: "We do not open a project we cannot staff to completion. Once the crew starts, they stay until the room is finished rather than disappearing mid-job to open someone else's.",
   },
   {
     icon: "star" as const,
-    title: "We finish what we can see",
-    body: "The final walkthrough is you pointing at things. Anything that isn't right gets fixed before we call the job done and before the last payment.",
+    title: "The walkthrough is yours to lead",
+    body: "At handover you point and we correct. Everything on that list is resolved before the project is called complete and before the final payment is due.",
   },
 ];
 
@@ -38,7 +38,7 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About"
-        title="We install showers and baths that outlive the trend they were built in."
+        title="Showers and baths built to outlive the trend they were designed in."
         intro={`${site.name} is a Michigan shower and bath installer. We build walk-in showers, walk-in tubs, barrier-free bathing and complete bathroom remodels for homeowners across ${site.serviceAreaLong}.`}
       />
 
@@ -48,31 +48,33 @@ export default function AboutPage() {
           <div className="lg:col-span-7">
             <p className="eyebrow">Our story</p>
             <h2 className="h-display mt-3 text-3xl text-ink sm:text-4xl">
-              We do one thing, and we do it all day.
+              A single trade, practiced every day.
             </h2>
             <div className="prose-ms mt-6 text-[1.05rem]">
               <p>
-                Plenty of contractors will do a bathroom between other jobs.
-                We&apos;re not that. Showers and baths are the work: the
-                waterproofing, the pans, the panel systems, the glass, the
-                accessible fixtures. When you do the same thing every week for
-                years, you stop guessing. You know which materials fail, which
-                layouts fight you, and which shortcuts come back to haunt
-                somebody.
+                Most contractors will take a bathroom between other jobs. We
+                took the opposite route and built the company around one trade.
+                Waterproofing, pans, solid surface panel systems, glass,
+                accessible fixtures: that is the entire scope, every week of the
+                year. Repetition at that depth removes the guesswork. You learn
+                which materials fail and when, which layouts fight back, and
+                which shortcuts come due five years after the crew has gone.
               </p>
               <p>
-                A lot of our work is for people who need their bathroom to
-                change before their life does: a parent who shouldn&apos;t be
-                stepping over a tub wall anymore, a veteran with a mobility need
-                the house was never designed for, a couple who want to stay in
-                the home they raised their kids in for another twenty years.
-                Those jobs have to be right. There&apos;s no cosmetic version of
-                a grab bar that holds.
+                A large share of our work is for households that need the
+                bathroom to change before circumstances force the issue. A
+                parent who should no longer be stepping over a tub wall. A
+                veteran with a mobility requirement the house was never designed
+                around. A couple intending to stay in the home they raised their
+                family in for another twenty years. There is no cosmetic version
+                of a grab bar that holds, and those projects leave no room for
+                one.
               </p>
               <p>
-                The rest of it is the pleasure work: a tired 1980s tub surround
-                turned into a bright, open walk-in shower with real storage and
-                glass that actually seals. Same standards either way.
+                The rest is the work we take pleasure in: a tired 1980s tub
+                surround opened into a bright walk-in shower with proper storage
+                and glass that seals correctly. The standard does not change
+                between the two.
               </p>
             </div>
           </div>
@@ -80,20 +82,20 @@ export default function AboutPage() {
           <div className="lg:col-span-5">
             <div className="overflow-hidden rounded-2xl ring-1 ring-ink/8">
               <Image
-                src="/photos/walk-in-tub-subway-tile.jpg"
-                alt="Walk-in tub installed in a subway tile bathroom with hand shower and grab bars"
-                width={1800}
-                height={1350}
+                src="/products/signature/room-hero-suite.jpg"
+                alt="Walk-in shower with stone-look walls, matte black fixtures and a low-profile base"
+                width={1600}
+                height={1600}
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 className="h-full w-full object-cover"
               />
             </div>
             <div className="mt-5 overflow-hidden rounded-2xl ring-1 ring-ink/8">
               <Image
-                src="/photos/neo-angle-shower-base.jpg"
-                alt="Neo-angle shower base with a center drain and marble-look wall panels"
-                width={1800}
-                height={1013}
+                src="/products/bases/base-marble-room.jpg"
+                alt="Low-profile shower base paired with marble-look wall panels"
+                width={1500}
+                height={768}
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 className="h-full w-full object-cover"
               />
@@ -106,7 +108,7 @@ export default function AboutPage() {
       <Section tone="cream">
         <SectionHead
           eyebrow="How we operate"
-          title="Four things we don't bend on."
+          title="Four standards we do not negotiate."
         />
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {beliefs.map((b) => (
@@ -132,7 +134,7 @@ export default function AboutPage() {
             <SectionHead
               eyebrow="Where we work"
               title={`All of ${site.serviceArea}.`}
-              intro="The name isn't decorative. If you're in the state, we'll come look at your bathroom."
+              intro="The name is not decorative. If your home is in the state, a design consultant will come and look at your bathroom."
             />
           </div>
           <div className="lg:col-span-7">
@@ -148,7 +150,7 @@ export default function AboutPage() {
               ))}
             </ul>
             <p className="mt-5 text-sm text-ink-soft">
-              Not on the list? Ask anyway:{" "}
+              Your area is not listed? Ask anyway:{" "}
               <a
                 href={`mailto:${site.email}`}
                 className="font-semibold text-brand-700 underline underline-offset-4"
@@ -161,8 +163,8 @@ export default function AboutPage() {
       </Section>
 
       <ClosingCta
-        title="Come see what we'd do with your bathroom."
-        body="No obligation, no pressure, no same-day-discount routine. Just a look at the space and an honest conversation about what's possible."
+        title="Find out what your bathroom could become."
+        body="No obligation, no pressure and no same-day discount routine. A proper look at the space, the finishes in your own light, and a straight conversation about what is possible in it."
       />
     </>
   );

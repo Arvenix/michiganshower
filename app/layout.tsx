@@ -3,6 +3,7 @@ import { Inter, Fraunces } from "next/font/google";
 import "./globals.css";
 import { site } from "@/site.config";
 import Header from "@/components/Header";
+import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
 import MobileCallBar from "@/components/MobileCallBar";
 
@@ -143,6 +144,7 @@ export default function RootLayout({
         >
           Skip to content
         </a>
+        <TopBar />
         <Header />
         <main id="main" className="flex-1">
           {children}

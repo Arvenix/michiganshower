@@ -100,9 +100,6 @@ export default async function ProductPage({ params }: Params) {
                   className="h-full w-full object-cover"
                 />
               </div>
-              <p className="mt-2 text-xs text-brand-300">
-                Manufacturer image, supplied by Samuel Mueller.
-              </p>
             </div>
           </div>
         </Container>
@@ -125,7 +122,7 @@ export default async function ProductPage({ params }: Params) {
           <SectionHead
             eyebrow="Colorways"
             title="See it in a room."
-            intro="Tap any sample to change the render. These are manufacturer images, so treat them as a guide to pattern and tone rather than an exact colour match."
+intro="Tap any sample to see it in a room. Treat these as a guide to pattern and tone; we bring the physical samples so you can judge the exact color in your own light."
           />
           <div className="mt-10">
             <ColorwayViewer colorways={p.colorways} lineName={p.name} />
@@ -159,9 +156,6 @@ export default async function ProductPage({ params }: Params) {
                 </li>
               ))}
             </ul>
-            <p className="mt-6 text-xs text-ink-soft">
-              Manufacturer images, supplied by Samuel Mueller.
-            </p>
           </Section>
         )
       )}

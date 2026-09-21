@@ -26,20 +26,20 @@ const accessibility = [
 
 const materials = [
   {
-    title: "Surfaces that don't need grout",
-    body: "Solid-surface and high-gloss acrylic wall systems in stone, marble and tile looks. No grout lines means nothing to seal, scrub, or watch go grey.",
+    title: "Solid surface, not a printed panel",
+    body: "Wall systems in stone, marble and tile faces where the color runs through the full thickness of the material. There is no decorative film to wear through, no grout joint to reseal, and a scuff can be buffed out rather than lived with.",
   },
   {
-    title: "Bases set properly",
-    body: "Pans set in a full mortar bed, pitched to the drain, and leak-tested before a single wall panel goes up. A pan that flexes is a pan that fails.",
+    title: "Bases set the way bases should be",
+    body: "Pans pitched to the drain at the factory, set in a full mortar bed, and water tested before a single wall panel goes up. A pan that flexes underfoot is a pan that will eventually fail.",
   },
   {
-    title: "Hardware that survives water",
-    body: "Brushed nickel, chrome and matte black in corrosion-resistant finishes, from valves and trim to towel bars and the assist bars nobody should ever have to doubt.",
+    title: "Hardware rated for constant water",
+    body: "Brushed nickel, chrome and matte black in corrosion-resistant finishes, from the valve and trim through to the assist bars, which are specified to be leaned on with a full body weight behind them.",
   },
   {
-    title: "Glass that seals",
-    body: "Framed, semi-frameless and frameless enclosures with tempered safety glass, proper sweeps, and headers set true so the door closes the same way in year ten.",
+    title: "Enclosures that still seal in year ten",
+    body: "Framed, semi-frameless and frameless glass in tempered safety stock, with proper sweeps and headers set true, so the door closes the same way a decade from now as it did on handover day.",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Services"
         title="Wet space. Dry space. Whole bath."
-        intro={`Take on the part that needs the most help, or hand us the whole room. Every job across ${site.serviceAreaLong} gets the same crew and the same standard.`}
+        intro={`Address the part of the room that needs it most, or commission the whole bathroom. Every project across ${site.serviceAreaLong} gets the same crew, the same specification and the same warranty.`}
       />
 
       {/* Three spaces, expanded */}
@@ -108,15 +108,15 @@ export default function ServicesPage() {
           <div className="lg:col-span-5">
             <SectionHead
               eyebrow="Aging in place"
-              title="Accessible bathing, done so it doesn't look institutional."
-              intro="A safe bathroom shouldn't announce itself. Modern assist bars, low thresholds and seated-height fixtures can read as design choices, and still hold 250 pounds."
+              title="Accessible bathing that does not look institutional."
+              intro="Safety equipment has come a long way from the chrome bar screwed to a tiled wall. Modern assist bars, flush thresholds and seated-height fixtures read as deliberate design decisions and still carry 250 pounds without complaint."
             />
             <div className="mt-8 overflow-hidden rounded-2xl ring-1 ring-ink/8">
               <Image
-                src="/photos/hand-shower-slide-bar.jpg"
-                alt="Adjustable slide-bar hand shower beside an angled transfer grab bar"
-                width={1350}
-                height={1800}
+                src="/products/bases/base-ada-grab-bars.jpg"
+                alt="Zero-threshold shower with grab bars and a slide-bar hand shower"
+                width={1496}
+                height={1500}
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 className="h-full w-full object-cover"
               />
@@ -156,8 +156,8 @@ export default function ServicesPage() {
       <Section tone="cream">
         <SectionHead
           eyebrow="Materials"
-          title="What we put in your walls."
-          intro="Specification is where a bathroom is really won or lost. Here's what we default to and why."
+          title="What goes into the wall."
+          intro="Specification is where a bathroom is won or lost, long before anyone sees a finish sample. This is what we default to, and the reasoning behind each choice."
         />
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {materials.map((m) => (

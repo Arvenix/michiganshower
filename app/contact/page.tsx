@@ -12,10 +12,10 @@ export const metadata: Metadata = {
 };
 
 const expect = [
-  "We reply within one business day.",
-  "We'll ask a few questions before quoting anything: square footage, what's there now, any mobility needs.",
-  "The in-home consultation is free, and it stays a consultation. No same-day pricing games.",
-  "If we're not the right fit for your job, we'll say so.",
+  "You will hear back within one business day.",
+  "We ask a short set of questions before quoting anything: the footprint, what is installed now, and whether there are mobility requirements to design around.",
+  "The in-home consultation is free and stays a consultation. There are no same-day pricing tactics.",
+  "If we are not the right company for your project, we will tell you that rather than sell you something else.",
 ];
 
 export default function ContactPage() {
@@ -23,8 +23,8 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Let's talk about your bathroom."
-        intro={`Tell us what you're working with and what you'd like it to be. We serve ${site.serviceAreaLong} and we answer every message.`}
+        title="Book your free in-home consultation."
+        intro={`Tell us what you are working with today and what you would like the room to become. We serve ${site.serviceAreaLong}, and every message gets an answer.`}
       />
 
       <Section tone="white">
@@ -132,10 +132,10 @@ export default function ContactPage() {
 
             <div className="mt-8 overflow-hidden rounded-2xl ring-1 ring-ink/8">
               <Image
-                src="/photos/glass-enclosure-shower.jpg"
-                alt="Sliding glass shower enclosure over a low-threshold base"
-                width={1350}
-                height={1800}
+                src="/products/signature/room-carrara-velvet.jpg"
+                alt="Walk-in shower with Carrara solid surface walls and a framed glass enclosure"
+                width={1500}
+                height={1500}
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 className="h-full w-full object-cover"
               />

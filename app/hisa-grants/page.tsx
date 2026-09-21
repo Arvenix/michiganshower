@@ -43,7 +43,7 @@ const steps = [
   {
     n: "02",
     title: "We measure and quote",
-    body: "We come out, look at the bathroom, and put together an itemized cost estimate broken down the way the VA wants to see it: labor and materials, line by line.",
+    body: "A design consultant visits, assesses the bathroom, and prepares an itemized cost estimate broken out the way the VA expects to receive it, with labor and materials separated line by line.",
   },
   {
     n: "03",
@@ -177,20 +177,20 @@ export default function HisaPage() {
           <div className="lg:col-span-6">
             <div className="overflow-hidden rounded-2xl ring-1 ring-ink/8">
               <Image
-                src="/photos/roll-in-shower-low-threshold.jpg"
-                alt="Roll-in shower base set nearly flush with the finished bathroom floor"
-                width={1800}
-                height={1350}
+                src="/products/bases/base-white.jpg"
+                alt="Zero-threshold shower base set flush with the finished bathroom floor"
+                width={1500}
+                height={834}
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="h-full w-full object-cover"
               />
             </div>
             <div className="mt-5 overflow-hidden rounded-2xl ring-1 ring-ink/8">
               <Image
-                src="/photos/walk-in-tub-grab-bars.jpg"
-                alt="Walk-in tub with a low step-in threshold and two grab bars"
-                width={1350}
-                height={1800}
+                src="/products/bases/base-ada-grab-bars.jpg"
+                alt="Zero-threshold shower with reinforced grab bars and a hand shower"
+                width={1496}
+                height={1500}
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="h-full w-full object-cover"
               />
@@ -203,8 +203,8 @@ export default function HisaPage() {
       <Section tone="white">
         <SectionHead
           eyebrow="How to apply"
-          title="Five steps, in order."
-          intro="The order matters. A quote without a prescription doesn't go anywhere, and a prescription without an itemized estimate stalls."
+          title="The VA's process, in the order it has to happen."
+          intro="The sequence matters more than most applicants expect. A quote submitted without a prescription goes nowhere, and a prescription submitted without an itemized estimate stalls in review."
         />
         <ol className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
           {steps.map((s) => (

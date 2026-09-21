@@ -29,7 +29,7 @@ const drivers = [
   {
     icon: "sparkle" as const,
     title: "Wall material and finish",
-    body: "An acrylic wall system in a standard pattern sits at one end. Solid-surface panels in a stone colorway with a matte finish sit at the other. Both are grout-free and both will outlast tile in a wet space, but they are not the same price. We will show you the actual samples and the actual difference.",
+    body: "A standard tile pattern in a high gloss sits at one end of the range. A veined stone colorway in a smooth matte velvet finish sits at the other. Every tier we install is solid surface and grout-free, and all of them will outlast tile in a wet area, but they are not the same price. The consultation is where you see the samples side by side and the difference becomes obvious.",
   },
   {
     icon: "shield" as const,
@@ -57,7 +57,7 @@ const questions = [
   "Is this quote for the wet space only, or the whole room?",
   "What happens to the price if you find a rotten subfloor? Is that a change order, and at what rate?",
   "Is the drain staying where it is?",
-  "What exactly is the wall material, and is it acrylic or solid surface?",
+  "What exactly is the wall material, and does the color run through the full thickness or sit on the face?",
   "Is the glass stock or made to measure?",
   "Who pulls the permit, and is it in the price?",
   "What does the warranty cover, what does it exclude, and who honors it in year ten?",
@@ -69,8 +69,8 @@ export default function CostPage() {
     <>
       <PageHero
         eyebrow="What it costs"
-        title="Nobody in this industry will tell you what a bathroom costs. Here is the next best thing."
-        intro="We will not put a fake number on a website, because the honest range for a bathroom is wide enough to be useless without seeing the room. What we can do is tell you exactly what moves the price, so you can read any quote, ours included, and know what you are looking at."
+        title="What actually determines the price of a bathroom."
+        intro="Almost nobody in this industry will publish a number, and there is a legitimate reason for that: the honest range is wide enough to be useless until someone has stood in the room. What we can publish is exactly what moves the price, so that you can read any quote, ours included, and understand precisely what you are looking at."
       />
 
       <Section tone="white">
@@ -141,9 +141,9 @@ export default function CostPage() {
                 above it.
               </p>
               <p className="text-brand-100">
-                We do not run one. Our quote is the same number today, next
-                Tuesday, and thirty days from now. That is less exciting, and it
-                is the point.
+                We do not operate one. Our quote is the same figure today, next
+                Tuesday and thirty days from now. It makes for a less dramatic
+                appointment, which is precisely the intention.
               </p>
             </div>
           </div>
@@ -180,8 +180,8 @@ export default function CostPage() {
       </Section>
 
       <ClosingCta
-        title="Want a real number for your bathroom?"
-        body={`It takes one visit. We measure, we look at what is behind the old unit where we can, and you get an itemized quote in writing. Call ${site.phone} or send us the details.`}
+        title="Get a real number for your bathroom."
+        body={`It takes a single visit. We measure the room, inspect what sits behind the existing unit wherever we can reach it, and leave you with an itemized quote in writing. Call ${site.phone} or send us the details.`}
       />
     </>
   );

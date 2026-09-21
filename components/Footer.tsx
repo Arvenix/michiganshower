@@ -22,9 +22,9 @@ export default function Footer() {
               className="h-14 w-auto"
             />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-brand-200">
-              {site.name} designs and installs walk-in showers, walk-in tubs and
-              full bath remodels across {site.serviceAreaLong}. Quality,
-              precision, and built to last, with your vision.
+              Walk-in showers, barrier-free bathing and full bathroom remodels
+              across {site.serviceAreaLong}. Grout-free surfaces, zero-threshold
+              access, and a lifetime workmanship warranty.
             </p>
 
             {site.licenseNumber && (

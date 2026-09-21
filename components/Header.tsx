@@ -19,7 +19,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Lock body scroll while the mobile menu is open
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
@@ -36,7 +35,7 @@ export default function Header() {
       }`}
     >
       <Container>
-        <div className="flex h-20 items-center justify-between gap-4">
+        <div className="flex h-[74px] items-center justify-between gap-4">
           <Link
             href="/"
             className="flex shrink-0 items-center gap-3"
@@ -45,27 +44,24 @@ export default function Header() {
             <Image
               src="/brand/mark-blue.png"
               alt=""
-              width={577}
-              height={562}
+              width={256}
+              height={249}
               priority
-              sizes="48px"
-              className="h-11 w-auto"
+              sizes="52px"
+              className="h-12 w-auto"
             />
-            <span className="flex flex-col leading-none">
-              <span className="whitespace-nowrap text-[1rem] font-bold tracking-tight text-brand-700">
-                MICHIGAN SHOWER
-              </span>
-              <span className="mt-1 whitespace-nowrap text-[0.58rem] font-semibold tracking-[0.16em] text-ink-soft">
-                SHOWER &amp; BATH INSTALLERS
-              </span>
-            </span>
+            <Image
+              src="/brand/wordmark-blue.png"
+              alt={site.name}
+              width={760}
+              height={222}
+              priority
+              sizes="200px"
+              className="h-[34px] w-auto"
+            />
           </Link>
 
-          {/* Desktop nav */}
-          <nav
-            className="hidden items-center gap-0.5 xl:flex"
-            aria-label="Primary"
-          >
+          <nav className="hidden items-center gap-0.5 xl:flex" aria-label="Primary">
             {nav.map((item) => {
               const active = pathname.startsWith(item.href);
               return (
@@ -86,23 +82,9 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            {site.showPhone && (
-              <a
-                href={`tel:${site.phoneHref}`}
-                className="hidden flex-col items-end leading-none md:flex"
-              >
-                <span className="text-[0.6rem] font-bold uppercase tracking-[0.14em] text-ink-soft">
-                  Call us
-                </span>
-                <span className="mt-1 inline-flex items-center gap-1.5 whitespace-nowrap text-[0.95rem] font-bold text-brand-700">
-                  <Icon name="phone" className="h-4 w-4" />
-                  {site.phone}
-                </span>
-              </a>
-            )}
             <Link
               href="/contact"
-              className="hidden whitespace-nowrap rounded-full bg-copper-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-copper-700 sm:inline-flex"
+              className="hidden whitespace-nowrap rounded-full bg-copper-600 px-6 py-3 text-[0.82rem] font-bold uppercase tracking-wider text-white transition-colors hover:bg-copper-700 sm:inline-flex"
             >
               Free Consultation
             </Link>
@@ -121,12 +103,8 @@ export default function Header() {
         </div>
       </Container>
 
-      {/* Mobile menu */}
       {open && (
-        <div
-          id="mobile-menu"
-          className="border-t border-ink/10 bg-white xl:hidden"
-        >
+        <div id="mobile-menu" className="border-t border-ink/10 bg-white xl:hidden">
           <Container className="py-4">
             <nav className="flex flex-col" aria-label="Mobile">
               {nav.map((item) => {
@@ -150,9 +128,9 @@ export default function Header() {
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="rounded-full bg-copper-600 px-5 py-3.5 text-center text-sm font-semibold text-white"
+                className="rounded-full bg-copper-600 px-5 py-3.5 text-center text-sm font-bold uppercase tracking-wider text-white"
               >
-                Request a Free Consultation
+                Free Consultation
               </Link>
               {site.showPhone && (
                 <a
@@ -162,12 +140,6 @@ export default function Header() {
                   Call {site.phone}
                 </a>
               )}
-              <a
-                href={`mailto:${site.email}`}
-                className="rounded-full px-5 py-3.5 text-center text-sm font-semibold text-brand-700 ring-1 ring-inset ring-brand-200"
-              >
-                {site.email}
-              </a>
             </div>
           </Container>
         </div>
