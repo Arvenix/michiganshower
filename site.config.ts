@@ -11,10 +11,10 @@ export const site = {
   name: "Michigan Shower, LLC",
   shortName: "Michigan Shower",
   url: "https://michiganshower.com",
-  tagline: "Professional Shower and Bath Installers",
+  tagline: "Walk-In Showers & Accessible Bathrooms",
 
   description:
-    "Michigan Shower, LLC designs and installs walk-in showers, walk-in tubs, barrier-free bathing and full bath remodels across Michigan. Quality, precision, and built to last, with your vision.",
+    "Michigan Shower, LLC designs and installs walk-in showers, walk-in tubs and barrier-free bathrooms across Michigan. Grout-free surfaces, zero-threshold access, installed in as little as one to two days.",
 
   // ── Contact ────────────────────────────────────────────────
   email: "info@michiganshower.com",
@@ -52,11 +52,19 @@ export const site = {
   // ── Trust badges shown under the homepage hero ─────────────
   // Only claim what you can back up. Edit or delete freely.
   badges: [
-    "Michigan owned & operated",
-    "Walk-in & barrier-free specialists",
-    "VA HISA grant projects welcome",
-    "Free in-home consultation",
+    "Michigan owned and operated",
+    "Lifetime workmanship warranty",
+    "VA HISA grant projects",
+    "Free in-home design consultation",
   ],
+
+  // ── Booking and offer ──────────────────────────────────────
+  // Keep this TRUE. It replaces the fake countdown timers the
+  // national chains run. Update it when your schedule changes.
+  bookingLeadTime: "about three weeks",
+
+  // Shown in the top bar. Not a discount, by design.
+  topBarMessage: "Free in-home design consultation. Written quote, good for 30 days.",
 
   // ── Contact form ───────────────────────────────────────────
   // Free key from https://web3forms.com. Enter info@michiganshower.com,
@@ -83,7 +91,6 @@ export const site = {
 export const nav = [
   { href: "/services", label: "Services" },
   { href: "/products", label: "Products" },
-  { href: "/gallery", label: "Gallery" },
   { href: "/cost", label: "Costs" },
   { href: "/hisa-grants", label: "HISA Grants" },
   { href: "/about", label: "About" },

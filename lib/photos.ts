@@ -1,4 +1,4 @@
-export type Category = "Showers" | "Walk-In Tubs" | "Accessibility";
+export type Category = "Walk-In Showers" | "Barrier-Free" | "Full Bath";
 
 export type Photo = {
   src: string;
@@ -10,119 +10,160 @@ export type Photo = {
 };
 
 /**
- * Past-project photography. To add a job: drop the image in
- * /public/photos and add an entry here. Keep `w`/`h` accurate:
- * they prevent layout shift while the image loads.
+ * Product imagery. These are manufacturer product photographs of the
+ * exact finishes and configurations we install, used under our dealer
+ * relationship. They are presented as product and finish references,
+ * never as a claim that a specific bathroom was one of our projects.
  */
 export const photos: Photo[] = [
   {
-    src: "/photos/barrier-free-shower-panels.jpg",
-    alt: "Barrier-free shower with light stone-look wall panels, a slide-bar hand shower and stainless grab bars",
-    caption:
-      "Barrier-free shower with grouted-look wall panels, a slide-bar hand shower and reinforced grab bars.",
-    category: "Showers",
-    w: 1350,
-    h: 1800,
+    src: "/products/signature/room-hero-suite.jpg",
+    alt: "Walk-in shower with light stone-look walls, matte black fixtures and a low-profile base beside a modern vanity",
+    caption: "Light stone walls, matte black fixtures, low-profile base.",
+    category: "Full Bath",
+    w: 1600,
+    h: 1600,
   },
   {
-    src: "/photos/shower-shelf-tower.jpg",
-    alt: "Shower with a full-height recessed shelf tower between vertical stone-look panels",
-    caption:
-      "Full-height recessed shelf tower centered between vertical stone-look panels. Storage without a single grout line.",
-    category: "Showers",
-    w: 1350,
-    h: 1800,
+    src: "/products/signature/room-carrara-velvet.jpg",
+    alt: "Carrara solid surface shower walls in a matte finish behind a black framed glass enclosure",
+    caption: "Carrara solid surface in matte, with a black framed enclosure.",
+    category: "Walk-In Showers",
+    w: 1500,
+    h: 1500,
   },
   {
-    src: "/photos/roll-in-shower-low-threshold.jpg",
-    alt: "Roll-in shower base set nearly flush with the bathroom floor beside a toilet",
-    caption:
-      "Roll-in base set nearly flush with the finished floor, giving a walker or wheelchair a clean path in.",
-    category: "Accessibility",
-    w: 1800,
-    h: 1350,
+    src: "/products/bases/base-ada-grab-bars.jpg",
+    alt: "Zero-threshold shower with grab bars, a fold-down seat position and a slide-bar hand shower",
+    caption: "Zero threshold, reinforced grab bars, seated-height hand shower.",
+    category: "Barrier-Free",
+    w: 1496,
+    h: 1500,
   },
   {
-    src: "/photos/walk-in-tub-grab-bars.jpg",
-    alt: "White walk-in tub with a low step-in door and two chrome grab bars",
-    caption:
-      "Walk-in tub with a low step-in threshold and dual grab bars placed for a real transfer, not for looks.",
-    category: "Walk-In Tubs",
-    w: 1350,
-    h: 1800,
+    src: "/products/classic-plus/room-awaken-gold.jpg",
+    alt: "Walk-in shower with dramatic white and gold veined marble-look walls",
+    caption: "Golden Vein marble look, trimmed to an out-of-square alcove.",
+    category: "Walk-In Showers",
+    w: 1500,
+    h: 1500,
   },
   {
-    src: "/photos/tub-to-shower-conversion.jpg",
-    alt: "Tub-to-shower conversion with built-in corner shelving and a vertical grab bar",
-    caption:
-      "Tub-to-shower conversion with molded corner shelving and a vertical entry bar, trimmed into existing oak.",
-    category: "Showers",
-    w: 1350,
-    h: 1800,
+    src: "/products/signature/room-grey-stone.jpg",
+    alt: "Shower with gray stone solid surface walls and a low-threshold base",
+    caption: "Gray Stone solid surface. No grout line anywhere in the wet area.",
+    category: "Walk-In Showers",
+    w: 1000,
+    h: 1000,
   },
   {
-    src: "/photos/walk-in-tub-subway-tile.jpg",
-    alt: "Walk-in tub in a subway tile bathroom with hand shower and several grab bars",
-    caption:
-      "Walk-in tub set into a subway-tile alcove with a hand shower and a full run of assist bars.",
-    category: "Walk-In Tubs",
-    w: 1800,
-    h: 1350,
+    src: "/products/bases/base-white.jpg",
+    alt: "Zero-threshold white shower base set flush with the surrounding bathroom floor",
+    caption: "A zero-threshold base set flush to the finished floor.",
+    category: "Barrier-Free",
+    w: 1500,
+    h: 834,
   },
   {
-    src: "/photos/glass-enclosure-shower.jpg",
-    alt: "Sliding glass shower enclosure over a low-threshold base with a horizontal grab bar",
-    caption:
-      "Sliding glass enclosure over a low-threshold base: open, bright, and easy to step into.",
-    category: "Showers",
-    w: 1350,
-    h: 1800,
+    src: "/products/classic-plus/room-tundra-grey.jpg",
+    alt: "Walk-in shower with tundra gray stone-look walls and a recessed niche",
+    caption: "Tundra Gray, with a full-height recessed niche.",
+    category: "Walk-In Showers",
+    w: 1500,
+    h: 1500,
   },
   {
-    src: "/photos/neo-angle-shower-base.jpg",
-    alt: "Neo-angle shower base with a center drain and marble-look wall panels",
-    caption:
-      "Neo-angle base with a center drain, pitched and set true so water goes where it should.",
-    category: "Showers",
-    w: 1800,
-    h: 1013,
+    src: "/products/signature/room-butterscotch.jpg",
+    alt: "Shower with warm butterscotch veined solid surface walls and brass fixtures",
+    caption: "Butterscotch solid surface with warm metal trim.",
+    category: "Full Bath",
+    w: 1000,
+    h: 1000,
   },
   {
-    src: "/photos/walk-in-tub-window.jpg",
-    alt: "Walk-in soaking tub under a window with a deck-mount faucet and chrome assist bar",
-    caption:
-      "Walk-in soaking tub under an existing window, with a deck-mount fill and an angled assist bar.",
-    category: "Walk-In Tubs",
-    w: 1032,
-    h: 774,
+    src: "/products/classic/room-subway-white.jpg",
+    alt: "Tub-to-shower conversion with white subway tile pattern walls and a chrome sliding door",
+    caption: "Classic subway pattern. A standard tub-to-shower conversion.",
+    category: "Walk-In Showers",
+    w: 1500,
+    h: 1500,
   },
   {
-    src: "/photos/hand-shower-slide-bar.jpg",
-    alt: "Adjustable slide-bar hand shower next to an angled transfer grab bar",
-    caption:
-      "Adjustable slide-bar hand shower beside an angled transfer bar, usable seated or standing.",
-    category: "Accessibility",
-    w: 1350,
-    h: 1800,
+    src: "/products/bases/base-marble-room.jpg",
+    alt: "Low-profile shower base paired with marble-look wall panels in a full bathroom",
+    caption: "Low-profile base in a full bathroom remodel.",
+    category: "Full Bath",
+    w: 1500,
+    h: 768,
   },
   {
-    src: "/photos/alcove-shower-framed-glass.jpg",
-    alt: "Alcove shower with framed glass doors, corner storage shelves and a curved assist bar",
-    caption:
-      "Alcove shower with framed glass doors, molded corner storage and a curved assist bar.",
-    category: "Showers",
-    w: 1350,
-    h: 1800,
+    src: "/products/classic-plus/room-dolomite.jpg",
+    alt: "Walk-in shower with white dolomite marble-look walls beside a window",
+    caption: "Dolomite, in a room that gets real daylight.",
+    category: "Walk-In Showers",
+    w: 1500,
+    h: 1162,
   },
   {
-    src: "/photos/walk-in-tub-tiled-surround.jpg",
-    alt: "Walk-in tub next to a tiled half-wall with large format floor tile",
-    caption:
-      "Walk-in tub paired with a tiled half-wall and large-format floor tile for an open, uncluttered room.",
-    category: "Walk-In Tubs",
-    w: 774,
-    h: 1032,
+    src: "/products/signature/room-moonstone.jpg",
+    alt: "Shower with pale moonstone solid surface walls and a freestanding tub alongside",
+    caption: "Moonstone solid surface, wet area and dry area together.",
+    category: "Full Bath",
+    w: 1500,
+    h: 1500,
+  },
+  {
+    src: "/products/classic/room-herringbone-grey.jpg",
+    alt: "Shower with dark gray herringbone pattern solid surface walls and a glass door",
+    caption: "Herringbone in dark gray. Pattern without a single grout joint.",
+    category: "Walk-In Showers",
+    w: 1500,
+    h: 1500,
+  },
+  {
+    src: "/products/bases/base-dark.jpg",
+    alt: "Dark low-profile shower base beneath light marble-look wall panels",
+    caption: "A darker base hides everyday wear better than white.",
+    category: "Barrier-Free",
+    w: 1500,
+    h: 768,
+  },
+  {
+    src: "/products/classic-plus/room-caramel-wave.jpg",
+    alt: "Walk-in shower with a caramel textured back wall and a recessed niche",
+    caption: "Textured back wall in caramel, which gives a narrow enclosure depth.",
+    category: "Walk-In Showers",
+    w: 1500,
+    h: 1329,
+  },
+  {
+    src: "/products/signature/room-creme.jpg",
+    alt: "Shower with creme solid surface walls next to a pedestal sink",
+    caption: "Creme solid surface in a smaller full bath.",
+    category: "Full Bath",
+    w: 1000,
+    h: 1000,
+  },
+  {
+    src: "/products/classic-plus/room-andes.jpg",
+    alt: "Walk-in shower with Andes stone-look walls and brushed brass fixtures",
+    caption: "Andes stone look with brushed brass trim.",
+    category: "Walk-In Showers",
+    w: 1500,
+    h: 1500,
+  },
+  {
+    src: "/products/classic/room-vertical-white.jpg",
+    alt: "Shower with white vertical tile pattern walls and a freestanding tub alongside",
+    caption: "Vertical tile pattern, which draws a low ceiling upward.",
+    category: "Walk-In Showers",
+    w: 1000,
+    h: 1000,
   },
 ];
 
-export const categories: Category[] = ["Showers", "Walk-In Tubs", "Accessibility"];
+export const categories: Category[] = [
+  "Walk-In Showers",
+  "Barrier-Free",
+  "Full Bath",
+];
